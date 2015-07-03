@@ -63,6 +63,9 @@ TextFilterSelector.prototype.setOption = function(option, value) {
 		this._updateSelector();
 	}
 }
+TextFilterSelector.prototype.get = function() {
+	return this.getSelector.apply(this, arguments);
+}
 TextFilterSelector.prototype.getSelector = function() {
 	var self = this;
 	self._selectorDep.depend();
