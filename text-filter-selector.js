@@ -19,7 +19,7 @@ function words(str) {
 };
 
 function regex(word, mustStart, caseSensitive) {
-	return {$regex: (mustStart ? '\\b' : '')+quote(word), $options: (caseSensitive ? '': 'i')};
+	return {$regex: (mustStart ? '(?:^|\\W)' : '')+quote(word), $options: (caseSensitive ? '': 'i')};
 }
 
 TextFilterSelector = function(field, options) {
