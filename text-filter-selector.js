@@ -35,6 +35,10 @@ TextFilterSelector = function(field, options) {
 	this._selectorDep = new Tracker.Dependency;
 }
 
+TextFilterSelector.prototype.reset = function() {
+	this.set('');
+}
+
 TextFilterSelector.prototype.set = function(value) {
 	if(_.isString(value)) {
 		if(this._text !== value) {
